@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+
+
+{% block body %}
+
+
+<div class="jumbotron text-center">
+    <h5>ToDo Appe Hoşgeldin,<h4 style="color:red">{{session["username"]}}</h4></h5>
+    <p>Bu proje SSAT Ses Teknolojileri şirketinin isteği üzerine yapılmıştır.Sitemizde kullanıcılar TO DO LİST sayesinde yapacağı işleri kolaylıkla takip edebilecektir.</p>
+</div>
+
+<ul>
+
+    {%for article in articles %}
+
+    <li>Article Id: {{article.id}}-Title:{{article.title}}-Content:{{article.content}}</li>
+    
+    {%endfor %}
+</ul>
+
+<div class="text-center"> 
+    <p>ORTAK GÖREVLERİ BİTİRMEK İÇİN</p>
+<a href="/dashboard" class="btn btn-danger">KONTROL PANELİNE GİT</a>
+
+</div>
+
+
+
+{% endblock %}
+

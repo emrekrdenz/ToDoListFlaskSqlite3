@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h3>Kontrol Paneli<h3>
+<small>Hoşgeldin, {{session["username"]}}</small>
+<hr>
+<p>ORTAK GÖREVLERİ BİTİRMEK İÇİN</p>
+<a href="/todo" class="btn btn-danger">TO DO LİSTE GİT</a>
+
+
+{% endblock body %}
+
+
+<!--Siteye giriş yapılınca görülecek sayfa-->
